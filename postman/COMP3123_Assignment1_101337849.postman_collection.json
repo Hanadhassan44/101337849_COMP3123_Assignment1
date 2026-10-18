@@ -1,0 +1,413 @@
+{
+  "info": {
+    "_postman_id": "33f2917b-309c-4adb-ac89-2415f6b40284",
+    "name": "COMP3123_Assignment1_101337849",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "28134767"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/health",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "health"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Signup — User A",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"username\": \"northstar_admin\",\r\n  \"email\": \"northstar.admin@example.com\",\r\n  \"password\": \"Northstar2026!\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/v1/user/signup",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "v1",
+            "user",
+            "signup"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login — User A",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"northstar.admin@example.com\",\r\n  \"password\": \"Northstar2026!\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/v1/user/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "v1",
+            "user",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Signup — User B",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"username\": \"harbor_manager\",\r\n  \"email\": \"harbor.manager@example.com\",\r\n  \"password\": \"Harbor2026!\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/v1/user/signup",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "v1",
+            "user",
+            "signup"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login — User B",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"username\": \"harbor_manager\",\r\n  \"password\": \"Harbor2026!\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/v1/user/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "v1",
+            "user",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Employee A",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YWQ0ZWYwMTIwNzYzMTU5ODljNDIyMzIiLCJpYXQiOjE3OTIzMzk3ODEsImV4cCI6MTc5MjM0MzM4MX0.tmRbCd_q5BZK6Myb6d0Zf0-QwXAPq1SdXCYGIVPrf8U",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "\r\n{\r\n  \"first_name\": \"Yusuf\",\r\n  \"last_name\": \"Rahman\",\r\n  \"email\": \"yusuf.rahman@example.com\",\r\n  \"position\": \"Cloud Infrastructure Engineer\",\r\n  \"salary\": 92000,\r\n  \"date_of_joining\": \"2026-04-13\",\r\n  \"department\": \"Infrastructure\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/v1/emp/employees",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "v1",
+            "emp",
+            "employees"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Employees",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YWQ0ZWYwMTIwNzYzMTU5ODljNDIyMzIiLCJpYXQiOjE3OTIzMzk3ODEsImV4cCI6MTc5MjM0MzM4MX0.tmRbCd_q5BZK6Myb6d0Zf0-QwXAPq1SdXCYGIVPrf8U",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/v1/emp/employees",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "v1",
+            "emp",
+            "employees"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Employee by ID",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YWQ0ZWYwMTIwNzYzMTU5ODljNDIyMzIiLCJpYXQiOjE3OTIzMzk3ODEsImV4cCI6MTc5MjM0MzM4MX0.tmRbCd_q5BZK6Myb6d0Zf0-QwXAPq1SdXCYGIVPrf8U",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/v1/emp/employees/6ad4efeb2076315989c42234",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "v1",
+            "emp",
+            "employees",
+            "6ad4efeb2076315989c42234"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Employee",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YWQ0ZWYwMTIwNzYzMTU5ODljNDIyMzIiLCJpYXQiOjE3OTIzMzk3ODEsImV4cCI6MTc5MjM0MzM4MX0.tmRbCd_q5BZK6Myb6d0Zf0-QwXAPq1SdXCYGIVPrf8U",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "\r\n{\r\n  \"first_name\": \"Yusuf\",\r\n  \"last_name\": \"Rahman\",\r\n  \"email\": \"yusuf.rahman@example.com\",\r\n  \"position\": \"Senior Cloud Infrastructure Engineer\",\r\n  \"salary\": 108000,\r\n  \"date_of_joining\": \"2026-04-13\",\r\n  \"department\": \"Platform Engineering\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/v1/emp/employees/6ad4efeb2076315989c42234",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "v1",
+            "emp",
+            "employees",
+            "6ad4efeb2076315989c42234"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Employee B",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YWQ0ZWY3YTIwNzYzMTU5ODljNDIyMzMiLCJpYXQiOjE3OTIzMzk4NjIsImV4cCI6MTc5MjM0MzQ2Mn0.S2oyBSygj6JqiZh1EEkGiN8GyzVORFz6LIDEwUbXxRE",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "\r\n{\r\n  \"first_name\": \"Mariam\",\r\n  \"last_name\": \"Farooq\",\r\n  \"email\": \"mariam.farooq@example.com\",\r\n  \"position\": \"Operations Coordinator\",\r\n  \"salary\": 68500,\r\n  \"date_of_joining\": \"2026-06-08\",\r\n  \"department\": \"Operations\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/v1/emp/employees",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "v1",
+            "emp",
+            "employees"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "User A Tries to Update User B's Employee",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YWQ0ZWYwMTIwNzYzMTU5ODljNDIyMzIiLCJpYXQiOjE3OTIzMzk3ODEsImV4cCI6MTc5MjM0MzM4MX0.tmRbCd_q5BZK6Myb6d0Zf0-QwXAPq1SdXCYGIVPrf8U",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/v1/emp/employees/6ad4f0cc2076315989c42235",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "v1",
+            "emp",
+            "employees",
+            "6ad4f0cc2076315989c42235"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Employee A",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YWQ0ZWYwMTIwNzYzMTU5ODljNDIyMzIiLCJpYXQiOjE3OTIzMzk3ODEsImV4cCI6MTc5MjM0MzM4MX0.tmRbCd_q5BZK6Myb6d0Zf0-QwXAPq1SdXCYGIVPrf8U",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/v1/emp/employees?eid=6ad4efeb2076315989c42234",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "v1",
+            "emp",
+            "employees"
+          ],
+          "query": [
+            {
+              "key": "eid",
+              "value": "6ad4efeb2076315989c42234"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
